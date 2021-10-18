@@ -1,0 +1,27 @@
+.tool-button {
+    background: url("../img/edit_icons.png");
+    background-size: 300%;
+    height: 30px;
+    width: 30px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.tool-button:hover {
+    border-color: #777777;
+}
+
+.tool-delete {
+    background-position: -50% 0;
+}
+
+.tool-download {
+    background-position: -50% 50%;
+}
+
+.tool-edit {
+    background-position: 0 0;
+}
