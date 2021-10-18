@@ -27,10 +27,15 @@ public class GalleryServlet extends HttpServlet {
 
         if (pictureId == null || "".equals(pictureId)) {
             answer.put("status", "-1");
-            answer.put("message", "Id required");
+            answer.put("message", "picture id required");
         } else {
-            answer.put("status", "1");
-            answer.put("message", pictureId);
+            if (Db.deletePictureById(pictureId)) {
+                answer.put("success", "true");
+                answer.put("message", "picture with id " + pictureId + " was deleted");
+            } else {
+                answer.put("error", "true");
+                answer.put("message", "failed to delete picture");
+            }
         }
 
         resp.setContentType("application/json");

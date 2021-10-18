@@ -80,14 +80,20 @@ function editClick(e) {
 }
 
 function deleteClick(e) {
-    const container = e.target.parentNode.parentNode.parentNode;
-    const pid = findPictureId(container);
+    const cardBody = e.target.parentNode.parentNode.parentNode;
+    const pictureCard = cardBody.parentNode.parentNode;
+    const pid = findPictureId(cardBody);
 
     if (confirm("Are you sure you want to delete image?")) {
         fetch("?id=" + pid, {method: "delete"})
-            .then(r => r.json())
-            .then(j => {
-                console.log(j);
+            .then(resp => resp.json())
+            .then(json => {
+                if (json.error) {
+                    alert(json.message);
+                } else {
+                    // Remove picture item from books container
+                    pictureCard.parentNode.removeChild(pictureCard);
+                }
             });
     }
 }
