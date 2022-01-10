@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  duodb:
+    image: wnameless/oracle-xe-11g-r2
+    ports:
+      - 1521:1521
+    volumes:
+      - .:/oracle-xe
+    environment:
+      - ORACLE_ALLOW_REMOTE=true
+      - MYSQL_ROOT_USER=admin
+      - MYSQL_ROOT_PASSWORD=admin
+      - MYSQL_DATABASE=library

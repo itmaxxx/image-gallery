@@ -14,7 +14,7 @@ import java.sql.SQLException;
 public class DbFilter implements Filter {
 
     private FilterConfig filterConfig;
-    private String configName = "db2.json";
+    private String configName = "db.json";
 
     @Override
     public void init(FilterConfig filterConfig) {

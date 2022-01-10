@@ -4,6 +4,6 @@
     <title>Static</title>
 </head>
 <body>
-<h1>Something went wrong. Site currently works in static mode.</h1>
+<h1>Site currently under construction.</h1>
 </body>
 </html>

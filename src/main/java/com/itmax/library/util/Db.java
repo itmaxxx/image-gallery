@@ -32,8 +32,12 @@ public class Db {
                     new oracle.jdbc.OracleDriver()
             );
 
+            System.out.println(connectionString);
+
             connection =
                     DriverManager.getConnection(connectionString);
+
+            System.out.println("Connected");
         } catch (Exception ex) {
             System.err.println(ex.getMessage());
 
