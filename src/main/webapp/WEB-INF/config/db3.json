@@ -1,8 +1,7 @@
 {
-  "dbms": "mysql",
+  "dbms": "oracle",
   "host": "localhost",
-  "port": 3306,
-  "user": "user181",
-  "pass": "pass181",
-  "schema": "J181"
+  "port": 1521,
+  "user": "admin",
+  "pass": "admin"
 }

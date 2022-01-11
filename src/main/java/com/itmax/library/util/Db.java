@@ -7,7 +7,7 @@ import java.sql.*;
 import java.util.ArrayList;
 
 public class Db {
-    final private static String SUFFIX = "_0";
+    final private static String SUFFIX = "_007";
     private static Connection connection;
 
     public static boolean setConnection(JSONObject connectionData) {

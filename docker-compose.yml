@@ -1,14 +1,16 @@
 version: "3"
 
 services:
-  duodb:
-    image: wnameless/oracle-xe-11g-r2
+  oracle:
+    # Docker Hub image (feel free to change the tag "latest" to any other available one)
+    image: gvenzl/oracle-xe:latest
+
+    # Provide passwords and other environment variables to container
+    environment:
+      - ORACLE_PASSWORD=oracle
+#      - APP_USER=admin
+#      - APP_USER_PASSWORD=admin
+
+    # Forward Oracle port
     ports:
       - 1521:1521
-    volumes:
-      - .:/oracle-xe
-    environment:
-      - ORACLE_ALLOW_REMOTE=true
-      - MYSQL_ROOT_USER=admin
-      - MYSQL_ROOT_PASSWORD=admin
-      - MYSQL_DATABASE=library
